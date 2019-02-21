@@ -13,14 +13,14 @@
 
 ## 1. Установка
 
-- ####Установка на устройство
+- #### Установка на устройство
 
 Установка производится путём клонирования репозитория на ваше устройство
 ```console
 root@Ar4kov:~$ git clone https://github.com/Ar4ikov/Rouneford/ Rounedford
 ```
 
-- ####Установка дополнений
+- #### Установка дополнений
 
 Для работы бота необходимо иметь в наличии библиотеки: `discord.py`, `youtube-dl`, `ffmpeg` и `asyncio` (Стандартную, если таковой не
 имелось изначально)
@@ -117,11 +117,13 @@ async def cmd_kek(self, channel, member, *args, **kwargs):
 ```python
 from core.objects import Logger
 logger = Logger("my_logs")
-logger.log("info")
+logger.log(self, "info")
+
+# self - сам класс плагина, в котором происходит логирование
 
 # Клиент содержит в себе экзлемпляр класса Logger, но вы можете создать свой логгер (как это сделано выше)
-self.client.logging.log("Запущен новый процесс")
-self.client.logging.log("{} >> [}".format(member.name, " ".join(args)))
+self.client.logging.log(self, "Запущен новый процесс")
+self.client.logging.log(self, "{} >> [}".format(member.name, " ".join(args)))
 ```
 
 - #### Запуск плагина
