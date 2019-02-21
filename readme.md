@@ -131,7 +131,7 @@ from discord import Member  # Не несёт смысловой нагрузк�
 
 async def run(self):
     super().run()
-    @self.client.event
+    @self.client.listen()
     async def on_member_join(member: Member):
         print(member.name, "зашёл на сервер!")
 ```
