@@ -13,7 +13,7 @@ class BotColors(Enum):
     WHITE = 0xffffff
     BLACK = 0x000000
 
-    """Немного больце цветов появятся позже"""
+    """Немного больше цветов появятся позже"""
 
 
 class Logger:
